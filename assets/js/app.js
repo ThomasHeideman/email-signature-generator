@@ -12,8 +12,10 @@
  * client (Gmail, Outlook, ...) can only show images that are hosted on a public
  * URL. When copying, every <img> is therefore rewritten to this base URL,
  * keeping the original filename. Set to '' to copy the local paths unchanged.
+ *
+ * Currently served by GitHub Pages from assets/img/ in this repository.
  */
-const PUBLIC_ASSET_BASE = 'https://hybrit.nl/wp-content/uploads/2023/03/';
+const PUBLIC_ASSET_BASE = 'https://thomasheideman.github.io/email-signature-generator/assets/img/';
 
 const FEEDBACK_DURATION_MS = 2000;
 

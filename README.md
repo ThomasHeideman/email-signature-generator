@@ -24,7 +24,7 @@ Signature markup uses inline styles on purpose, because e-mail clients ignore ex
 
 ## Configuration
 
-E-mail clients can only display images hosted on a public URL. When copying, `app.js` rewrites every signature image to `PUBLIC_ASSET_BASE` (top of `assets/js/app.js`) plus the original filename. Upload the contents of `assets/img/` to that location, or change the constant to your own host. Set it to `''` to copy the local paths unchanged.
+E-mail clients can only display images hosted on a public URL. When copying, `app.js` rewrites every signature image to `PUBLIC_ASSET_BASE` (top of `assets/js/app.js`) plus the original filename. By default this is the GitHub Pages copy of `assets/img/` (`https://thomasheideman.github.io/email-signature-generator/assets/img/`), so any image you add to `assets/img/` and push becomes available after Pages rebuilds. To use another host, upload the contents of `assets/img/` there and change the constant. Set it to `''` to copy the local paths unchanged.
 
 ## Missing assets
 
