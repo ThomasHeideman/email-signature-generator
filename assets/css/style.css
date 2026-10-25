@@ -1,0 +1,278 @@
+/* ==========================================================================
+   Hybrit E-mail Signature Generator - interface styles
+   NOTE: the signature templates keep their own inline styles on purpose
+   (email clients ignore external stylesheets). Only the generator UI is
+   styled here.
+   ========================================================================== */
+
+body {
+   margin: 0;
+}
+
+.logo img {
+   width: 320px;
+}
+
+header {
+   background: linear-gradient(-135deg, #E95B25 0%, #EE8211 100%), #EE8211;
+   padding: 0 1rem;
+   box-shadow: 0 2px 4px rgba(50, 50, 50, .5);
+   z-index: 999;
+   position: relative;
+}
+
+main {
+   display: flex;
+   margin: auto;
+}
+
+.column-70 {
+   width: 70%;
+   padding: 3rem 0;
+   background: #fff;
+}
+
+.column-30 {
+   width: 30%;
+   background: #dddddd;
+   padding: 3rem 0;
+}
+
+/* ---- Form ---------------------------------------------------------------- */
+
+.form-fieldset {
+   border: 0;
+   margin: 0;
+   padding: 0;
+   min-width: 0;
+}
+
+.inputfield {
+   margin: 0 0 1rem;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.inputfield label,
+.inputfield input {
+   display: block;
+   width: 100%;
+   font-family: 'Raleway', sans-serif;
+}
+
+.inputfield label {
+   margin: 0 0 .25rem;
+   font-size: .875rem;
+}
+
+.inputfield input {
+   padding: .5rem;
+   border: none;
+   border-radius: .25rem;
+   font-size: 1rem;
+   box-sizing: border-box;
+}
+
+.inputfield input::placeholder {
+   color: #c6c6c6;
+   font-weight: 300;
+   font-size: .875rem;
+}
+
+/* ---- Buttons ------------------------------------------------------------- */
+
+.button {
+   background: #323232;
+   color: #fff;
+   border: none;
+   font-size: 1rem;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 700;
+   padding: .75rem 2rem;
+   border-radius: .25rem;
+   box-shadow: 0 2px 4px rgba(50, 50, 50, .5);
+   display: inline-block;
+   transition: ease-in-out 300ms;
+}
+
+.button:after {
+   content: ".";
+   color: #EE8211;
+   font-weight: 900;
+}
+
+.button:hover {
+   background: #4b4b4b;
+   box-shadow: 0 1px 4px rgba(50, 50, 50, .5);
+   transform-origin: center;
+   cursor: pointer;
+}
+
+.copy-button {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: end;
+   padding: 0.5rem;
+   border-radius: 0.25rem;
+   box-shadow: 0 2px 4px rgba(50, 50, 50, .35);
+   border: 1px solid #323232;
+   background: none;
+   font-size: .875rem;
+   font-family: 'Raleway', sans-serif;
+   font-weight: 500;
+   color: #323232;
+   transition: ease-in-out 300ms;
+}
+
+.copy-button:hover {
+   color: #fff;
+   border-color: #EE8211;
+   box-shadow: 0 1px 4px rgba(50, 50, 50, .35);
+   background: #EE8211;
+   cursor: pointer;
+}
+
+/* Temporary feedback states set by app.js after a copy attempt */
+.copy-button.is-copied {
+   color: #fff;
+   border-color: #2e7d32;
+   background: #2e7d32;
+}
+
+.copy-button.is-error {
+   color: #fff;
+   border-color: #c62828;
+   background: #c62828;
+}
+
+/* Keyboard focus (buttons are now real <button> elements) */
+.button:focus-visible,
+.copy-button:focus-visible,
+.inputfield input:focus-visible {
+   outline: 2px solid #EE8211;
+   outline-offset: 2px;
+}
+
+/* ---- Typography & layout ------------------------------------------------- */
+
+.title--h1 {
+   font-family: 'Raleway', sans-serif;
+   margin: 0.5rem 0 1.5rem;
+   color: #323232;
+   font-size: 1.5rem;
+   flex: 1;
+}
+
+.title--h2 {
+   font-family: 'Raleway', sans-serif;
+   margin: 1.25rem 0;
+   color: #323232;
+   font-size: 1rem;
+   font-weight: 700;
+   padding: 0;
+}
+
+h1.title--h1:after {
+   content: ".";
+   color: #fff;
+   font-weight: 700;
+}
+
+.box-container {
+   flex: 1 1 100%;
+}
+
+.content-wrapper {
+   width: 75%;
+   margin: auto;
+}
+
+.column-70 .content-wrapper {
+   background: #FFF;
+   padding: 1rem;
+   border-radius: 4px;
+   box-shadow: 0 2px 4px rgba(50, 50, 50, .5);
+   position: relative;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: end;
+}
+
+a:hover {
+   text-decoration: underline !important;
+}
+
+/* ---- Responsive ---------------------------------------------------------- */
+
+img {
+   max-width: 100%;
+}
+
+/* Signature previews keep their fixed email layout; scroll instead of overflowing */
+.box-container {
+   min-width: 0;
+   overflow-x: auto;
+}
+
+/* Tablet: stack form above previews */
+@media (max-width: 960px) {
+   main {
+      flex-direction: column;
+   }
+
+   .column-30,
+   .column-70 {
+      width: auto;
+      padding: 2rem 0;
+   }
+
+   .content-wrapper {
+      width: 90%;
+      max-width: 40rem;
+   }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+   .logo img {
+      width: 220px;
+   }
+
+   .column-30,
+   .column-70 {
+      padding: 1.5rem 0;
+   }
+
+   .content-wrapper {
+      width: calc(100% - 2rem);
+   }
+
+   .column-70 .content-wrapper {
+      padding: 0.75rem;
+   }
+
+   .title--h1 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+   }
+
+   .inputfield input {
+      font-size: 1rem; /* prevents iOS zoom on focus */
+   }
+
+   .button,
+   .copy-button {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      box-sizing: border-box;
+      padding: 0.75rem;
+   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+   .button,
+   .copy-button {
+      transition: none;
+   }
+}

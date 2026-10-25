@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;900&amp;display=swap"
+      rel="stylesheet">
+   <style>
+      body {
+         margin: 0;
+      }
+
+      .logo img {
+         width: 320px;
+      }
+
+      header {
+         background: linear-gradient(-135deg, #E95B25 0%, #EE8211 100%), #EE8211;
+         padding: 0 1rem;
+         box-shadow: 0 2px 4px rgba(50, 50, 50, .5);
+         z-index: 999;
+         position: relative;
+      }
+
+      main {
+         display: flex;
+         margin: auto;
+      }
+
+      .column-70 {
+         width: 70%;
+         padding: 3rem 0;
+         background: #fff;
+      }
+
+      .column-30 {
+         width: 30%;
+         background: #dddddd;
+         padding: 3rem 0;
+      }
+
+      .inputfield {
+         margin: 0 0 1rem;
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      .inputfield label,
+      .inputfield input {
+         display: block;
+         width: 100%;
+         font-family: 'Raleway', sans-serif;
+      }
+
+      .inputfield label {
+         margin: 0 0 .25rem;
+         font-size: .875rem;
+      }
+
+      .inputfield input {
+         padding: .5rem;
+         border: none;
+         border-radius: .25rem;
+         font-size: 1rem;
+      }
+
+      .inputfield input::placeholder {
+         color: #c6c6c6;
+         font-weight: 300;
+         font-size: .875rem
+      }
+
+      .button {
+         background: #323232;
+         color: #fff;
+         border: none;
+         font-size: 1rem;
+         font-family: 'Raleway', sans-serif;
+         font-weight: 700;
+         padding: .75rem 2rem;
+         border-radius: .25rem;
+         box-shadow: 0 2px 4px rgba(50, 50, 50, .5);
+         display: inline-block;
+         transition: ease-in-out 300ms;
+      }
+
+      .button:after {
+         content: ".";
+         color: #EE8211;
+         font-weight: 900;
+      }
+
+      .button:hover {
+         background: #4b4b4b;
+         box-shadow: 0 1px 4px rgba(50, 50, 50, .5);
+         transform-origin: center;
+         cursor: pointer;
+      }
+
+      .copy-button {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: end;
+         padding: 0.5rem;
+         border-radius: 0.25rem;
+         box-shadow: 0 2px 4px rgba(50, 50, 50, .35);
+         border: 1px solid #323232;
+         background: none;
+         font-size: .875rem;
+         font-family: 'Raleway', sans-serif;
+         font-weight: 500;
+         color: #323232;
+         transition: ease-in-out 300ms;
+      }
+
+      .copy-button:hover {
+         color: #fff;
+         border-color: #EE8211;
+         box-shadow: 0 1px 4px rgba(50, 50, 50, .35);
+         background: #EE8211;
+         cursor: pointer;
+      }
+
+      .title--h1 {
+         font-family: 'Raleway', sans-serif;
+         margin: 0.5rem 0 1.5rem;
+         color: #323232;
+         font-size: 1.5rem;
+         flex: 1;
+      }
+
+      .title--h2 {
+         font-family: 'Raleway', sans-serif;
+         margin: 1.25rem 0;
+         color: #323232;
+         font-size: 1rem;
+         font-weight: 700;
+      }
+
+      h1.title--h1:after {
+         content: ".";
+         color: #fff;
+         font-weight: 700;
+      }
+
+      .box-container {
+         flex: 1 1 100%;
+      }
+
+      .content-wrapper {
+         width: 75%;
+         margin: auto;
+      }
+
+      .column-70 .content-wrapper {
+         background: #FFF;
+         padding: 1rem;
+         border-radius: 4px;
+         box-shadow: 0 2px 4px rgba(50, 50, 50, .5);
+         position: relative;
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: end;
+      }
+   </style>
+   <style>
+      a:hover {
+         text-decoration: underline !important;
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <div class="logo">
+         <img src="/Hybrit-animated-logo_white.gif">
+      </div>
+   </header>
+   <main>
+      <div class="column-30">
+         <article class="content-wrapper">
+            <form>
+               <legend class="title--h2">Stap 1: vul je gegevens in</legend>
+               <div class="inputfield">
+                  <label for="name">Naam</label>
+                  <input type="text" name="name" id="input-Name" placeholder="Voornaam achternaam" required="">
+               </div>
+               <div class="inputfield">
+                  <label for="title">Functietitel</label>
+                  <input type="text" name="title" id="input-Title" placeholder="Functietitel" required="">
+               </div>
+               <div class="inputfield">
+                  <label for="email">Email-adres</label>
+                  <input type="email" name="email" id="input-Email" placeholder="voornaam.achternaam@hybrit.org"
+                     required="">
+               </div>
+               <div class="inputfield">
+                  <label for="mobile">Mobiel nummer (optioneel)</label>
+                  <input type="tel" name="mobile" placeholder="06 XXX XX XXX" id="input-Mobile">
+               </div>
+               <div class="inputfield">
+                  <label for="availability">afwezigheidstekst (optioneel)</label>
+                  <input type="text" name="availability" placeholder="afwezig op woensdagen" id="input-Availability">
+               </div>
+               <legend class="title--h2"> Stap 2: Genereer je handtekening</legend>
+               <div id="generate" class="button">Generate Signature</div>
+               <legend class="title--h2">Stap 3: kopieer je handtekening en plak deze in Gmail</legend>
+            </form>
+         </article>
+      </div>
+      <div class="column-70">
+         <div class="content-wrapper">
+            <h1 class="title--h1">E-mail handtekening - Basis</h1>
+            <div id="signatureOne" class="box-container">
+               <table cellpadding="0" cellspacing="0"
+                  style="vertical-align: -webkit-baseline-middle;font-size: medium;width: 100%;max-width: 560px;font-family: 'Raleway', sans-serif;">
+                  <tbody>
+                     <tr>
+                        <td style="
+                              padding: 6px 16px;
+                              ">
+                           <table cellpadding="0" cellspacing="0"
+                              style="vertical-align: -webkit-baseline-middle;font-size: medium;width: 100%;font-family: 'Raleway', sans-serif;">
+                              <tbody style="
+                                    width: 100%;
+                                    ">
+                                 <tr height="24" style="vertical-align: middle;">
+                                    <td style="vertical-align: middle;">
+                                       <h2 class="name" color="#323232"
+                                          style="margin: 0px;font-size: 18px;color: #323232;font-weight: 700;font-family: 'Raleway', sans-serif;white-space: nowrap;">
+                                          Voornaam Achternaam</h2>
+                                    </td>
+                                 </tr>
+                                 <tr height="24">
+                                    <td>
+                                       <span color="#323232" font-size="medium" class="title"
+                                          style="margin: 0px;color: rgb(50, 50, 50);font-size: 14px;line-height: 22px;font-family: 'Raleway', sans-serif;font-weight: 500;white-space: nowrap;">Functietitel</span>
+                                    </td>
+                                 </tr>
+                                 <tr height="12"></tr>
+                                 <tr>
+                                    <td style="vertical-align: middle;">
+                                       <table cellpadding="0" cellspacing="0"
+                                          style="vertical-align: -webkit-baseline-middle;font-size: medium;font-family: 'Raleway', sans-serif;font-weight: 500;">
+                                          <tbody>
+                                             <tr height="28" style="vertical-align: middle;">
+                                                <td width="30" style="vertical-align: middle;">
+                                                   <table cellpadding="0" cellspacing="0"
+                                                      style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                               <span width="24" style="display: inline-block;">
+                                                                  <img
+                                                                     src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_mail.png"
+                                                                     color="#EE8211" alt="emailAddress" width="20"
+                                                                     style="display: block;margin-right: 4px;">
+                                                               </span>
+                                                            </td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td style="padding: 0px;">
+                                                   <a class="email" href="mailto:voornaamachternaam@hybrit.org"
+                                                      color="#323232"
+                                                      style="text-decoration: none; color: rgb(50, 50, 50); font-size: 14px;">
+                                                      <span>voornaamachternaam@hybrit.org</span>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                             <tr style="vertical-align: middle;" height="28">
+                                                <td width="26" style="vertical-align: middle;">
+                                                   <table cellpadding="0" cellspacing="0"
+                                                      style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                               <span width="24" style="display: inline-block;">
+                                                                  <img
+                                                                     src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon__Office_Phone-1.png"
+                                                                     color="#EE8211" alt="mobilePhone" width="20"
+                                                                     style="display: block;margin-right: 4px;">
+                                                               </span>
+                                                            </td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td style="padding: 0px; color: rgb(50, 50, 50);">
+                                                   <a class="office-phone" href="tel:0031303080728" color="#323232"
+                                                      style="text-decoration: none; color: rgb(50, 50, 50); font-size: 14px;">
+                                                      <span> 030 227 31 97</span>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <table cellpadding="0" cellspacing="0"
+                              style="width: 100%;vertical-align: -webkit-baseline-middle;font-size: medium;font-family: Arial;background: #EE8211;height: 2px;">
+                              <tbody></tbody>
+                           </table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="
+                              padding: 12px;
+                              ">
+                           <table cellpadding="0" cellspacing="0"
+                              style="width: 100%; vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                              <tbody>
+                                 <tr>
+                                    <td style="vertical-align: top;width: auto;">
+                                       <a href="https://hybrit.nl/" target="_blank">
+                                          <img
+                                             src="https://hybrit.nl/wp-content/uploads/2023/03/Hybrit_animated_logo.gif"
+                                             role="presentation" width="160"
+                                             style="display: inline-block;max-width: 160px;">
+                                       </a>
+                                    </td>
+                                    <td width="30">
+                                       <div style="width: 30px;"></div>
+                                    </td>
+                                    <td style="text-align: right;vertical-align: middle;">
+                                       <table cellpadding="0" cellspacing="0"
+                                          style="display: inline-block; vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                          <tbody>
+                                             <tr style="text-align: right;">
+                                                <td>
+                                                   <a href="https://www.facebook.com/codeitsmarter/" color="#EE8211"
+                                                      class="social-links" style="display: inline-block;padding: 0px;">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_facebook_dark.png"
+                                                         alt="facebook" color="#EE8211" height="24" class="social-links"
+                                                         style="max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                                <td>
+                                                   <a href="https://www.instagram.com/hybrit_it/" color="#EE8211"
+                                                      class="social-links"
+                                                      style="display: inline-block;padding: 0px;/* background-color: rgb(238, 130, 17); */">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_Instagram_dark.png"
+                                                         alt="linkedin" color="#EE8211" height="24"
+                                                         style="/* background-color: rgb(238, 130, 17); */max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                                <td>
+                                                   <a href="https://twitter.com/BHybrit" color="" class="social-links"
+                                                      style="display: inline-block;padding: 0px;">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_Twitter_dark.png"
+                                                         alt="twitter" height="24" class="social-links"
+                                                         style="max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                                <td>
+                                                   <a href="https://www.linkedin.com/company/hybrit-bv/mycompany/"
+                                                      color="#EE8211" class="social-links"
+                                                      style="display: inline-block;padding: 0px;/* background-color: rgb(238, 130, 17); */">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_Linkedin_dark.png"
+                                                         alt="linkedin" color="#EE8211" height="24"
+                                                         style="/* background-color: rgb(238, 130, 17); */max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <button class="copy-button">Copy to clipboard</button>
+         </div>
+         <br>
+         <article class="content-wrapper">
+            <h1 class="title--h1">E-mail handtekening - Basis + mobiel nummer</h1>
+            <div id="signatureTwo" class="box-container">
+               <table cellpadding="0" cellspacing="0"
+                  style="vertical-align: -webkit-baseline-middle;font-size: medium;width: 100%;max-width: 560px;font-family: 'Raleway', sans-serif;">
+                  <tbody>
+                     <tr>
+                        <td style="
+                              padding: 6px 16px;
+                              ">
+                           <table cellpadding="0" cellspacing="0"
+                              style="vertical-align: -webkit-baseline-middle;font-size: medium;width: 100%;font-family: 'Raleway', sans-serif;">
+                              <tbody style="
+                                    width: 100%;
+                                    ">
+                                 <tr height="24" style="vertical-align: middle;">
+                                    <td style="vertical-align: middle;">
+                                       <h2 class="name" color="#323232"
+                                          style="margin: 0px;font-size: 18px;color: #323232;font-weight: 700;font-family: 'Raleway', sans-serif;white-space: nowrap;">
+                                          Voornaam Achternaam</h2>
+                                    </td>
+                                 </tr>
+                                 <tr height="24">
+                                    <td>
+                                       <span color="#323232" font-size="medium" class="title"
+                                          style="margin: 0px;color: rgb(50, 50, 50);font-size: 14px;line-height: 22px;font-family: 'Raleway', sans-serif;font-weight: 500;white-space: nowrap;">Functietitel</span>
+                                    </td>
+                                 </tr>
+                                 <tr height="12"></tr>
+                                 <tr>
+                                    <td style="vertical-align: middle;">
+                                       <table cellpadding="0" cellspacing="0"
+                                          style="vertical-align: -webkit-baseline-middle;font-size: medium;font-family: 'Raleway', sans-serif;font-weight: 500;">
+                                          <tbody>
+                                             <tr style="vertical-align: middle;" height="28">
+                                                <td width="26" style="vertical-align: middle;">
+                                                   <table cellpadding="0" cellspacing="0"
+                                                      style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                               <span width="24" style="display: inline-block;">
+                                                                  <img
+                                                                     src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon__Mobile-1.png"
+                                                                     color="#EE8211" alt="mobilePhone" width="20"
+                                                                     style="display: block;margin-right: 4px;">
+                                                               </span>
+                                                            </td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td style="padding: 0px; color: rgb(50, 50, 50);">
+                                                   <a class="mobile-phone" href="tel:00316xxxxxxxx" color="#323232"
+                                                      style="text-decoration: none; color: rgb(50, 50, 50); font-size: 14px;">
+                                                      <span class="mobile">+316xxxxxxxx</span>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                             <tr height="28" style="vertical-align: middle;">
+                                                <td width="30" style="vertical-align: middle;">
+                                                   <table cellpadding="0" cellspacing="0"
+                                                      style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                               <span width="24" style="display: inline-block;">
+                                                                  <img
+                                                                     src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_mail.png"
+                                                                     color="#EE8211" alt="emailAddress" width="20"
+                                                                     style="display: block;margin-right: 4px;">
+                                                               </span>
+                                                            </td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td style="padding: 0px;">
+                                                   <a class="email" href="mailto:voornaamachternaam@hybrit.org"
+                                                      color="#323232"
+                                                      style="text-decoration: none; color: rgb(50, 50, 50); font-size: 14px;">
+                                                      <span>voornaamachternaam@hybrit.org</span>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                             <tr style="vertical-align: middle;" height="28">
+                                                <td width="26" style="vertical-align: middle;">
+                                                   <table cellpadding="0" cellspacing="0"
+                                                      style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                               <span width="24" style="display: inline-block;">
+                                                                  <img
+                                                                     src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon__Office_Phone-1.png"
+                                                                     color="#EE8211" alt="mobilePhone" width="20"
+                                                                     style="display: block;margin-right: 4px;">
+                                                               </span>
+                                                            </td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td style="padding: 0px; color: rgb(50, 50, 50);">
+                                                   <a class="office-phone" href="tel:0031303080728" color="#323232"
+                                                      style="text-decoration: none; color: rgb(50, 50, 50); font-size: 14px;">
+                                                      <span> 030 227 31 97</span>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <table cellpadding="0" cellspacing="0"
+                              style="width: 100%;vertical-align: -webkit-baseline-middle;font-size: medium;font-family: Arial;background: #EE8211;height: 2px;">
+                              <tbody></tbody>
+                           </table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="
+                              padding: 12px;
+                              ">
+                           <table cellpadding="0" cellspacing="0"
+                              style="width: 100%; vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                              <tbody>
+                                 <tr>
+                                    <td style="vertical-align: top;width: auto;">
+                                       <a href="https://hybrit.nl/" target="_blank">
+                                          <img
+                                             src="https://hybrit.nl/wp-content/uploads/2023/03/Hybrit_animated_logo.gif"
+                                             role="presentation" width="160"
+                                             style="display: inline-block;max-width: 160px;">
+                                       </a>
+                                    </td>
+                                    <td width="30">
+                                       <div style="width: 30px;"></div>
+                                    </td>
+                                    <td style="text-align: right;vertical-align: middle;">
+                                       <table cellpadding="0" cellspacing="0"
+                                          style="display: inline-block; vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                          <tbody>
+                                             <tr style="text-align: right;">
+                                                <td>
+                                                   <a href="https://www.facebook.com/codeitsmarter/" color="#EE8211"
+                                                      class="social-links" style="display: inline-block;padding: 0px;">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_facebook_dark.png"
+                                                         alt="facebook" color="#EE8211" height="24" class="social-links"
+                                                         style="max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                                <td>
+                                                   <a href="https://www.instagram.com/hybrit_it/" color="#EE8211"
+                                                      class="social-links"
+                                                      style="display: inline-block;padding: 0px;/* background-color: rgb(238, 130, 17); */">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_Instagram_dark.png"
+                                                         alt="linkedin" color="#EE8211" height="24"
+                                                         style="/* background-color: rgb(238, 130, 17); */max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                                <td>
+                                                   <a href="https://twitter.com/BHybrit" color="" class="social-links"
+                                                      style="display: inline-block;padding: 0px;">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_Twitter_dark.png"
+                                                         alt="twitter" height="24" class="social-links"
+                                                         style="max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                                <td>
+                                                   <a href="https://www.linkedin.com/company/hybrit-bv/mycompany/"
+                                                      color="#EE8211" class="social-links"
+                                                      style="display: inline-block;padding: 0px;/* background-color: rgb(238, 130, 17); */">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_Linkedin_dark.png"
+                                                         alt="linkedin" color="#EE8211" height="24"
+                                                         style="/* background-color: rgb(238, 130, 17); */max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <button class="copy-button">Copy to clipboard</button>
+         </article>
+         <br>
+         <article class="content-wrapper">
+            <h1 class="title--h1">E-mail handtekening - Basis + afwezigheid op vaste dagen</h1>
+            <div id="signatureThree" class="box-container">
+               <table cellpadding="0" cellspacing="0"
+                  style="vertical-align: -webkit-baseline-middle;font-size: medium;width: 100%;max-width: 560px;font-family: 'Raleway', sans-serif;">
+                  <tbody>
+                     <tr>
+                        <td style="
+                              padding: 6px 16px;
+                              ">
+                           <table cellpadding="0" cellspacing="0"
+                              style="vertical-align: -webkit-baseline-middle;font-size: medium;width: 100%;font-family: 'Raleway', sans-serif;">
+                              <tbody style="
+                                    width: 100%;
+                                    ">
+                                 <tr height="24" style="vertical-align: middle;">
+                                    <td style="vertical-align: middle;">
+                                       <h2 class="name" color="#323232"
+                                          style="margin: 0px;font-size: 18px;color: #323232;font-weight: 700;font-family: 'Raleway', sans-serif;white-space: nowrap;">
+                                          Voornaam Achternaam</h2>
+                                    </td>
+                                 </tr>
+                                 <tr height="24">
+                                    <td>
+                                       <span color="#323232" font-size="medium" class="title"
+                                          style="margin: 0px;color: rgb(50, 50, 50);font-size: 14px;line-height: 22px;font-family: 'Raleway', sans-serif;font-weight: 500;white-space: nowrap;">Functietitel</span>
+                                    </td>
+                                 </tr>
+                                 <tr height="12"></tr>
+                                 <tr>
+                                    <td style="vertical-align: middle;">
+                                       <table cellpadding="0" cellspacing="0"
+                                          style="vertical-align: -webkit-baseline-middle;font-size: medium;font-family: 'Raleway', sans-serif;font-weight: 500;">
+                                          <tbody>
+                                             <tr height="28" style="vertical-align: middle;">
+                                                <td width="30" style="vertical-align: middle;">
+                                                   <table cellpadding="0" cellspacing="0"
+                                                      style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                               <span width="24" style="display: inline-block;">
+                                                                  <img
+                                                                     src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_mail.png"
+                                                                     color="#EE8211" alt="emailAddress" width="20"
+                                                                     style="display: block;margin-right: 4px;">
+                                                               </span>
+                                                            </td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td style="padding: 0px;">
+                                                   <a class="email" href="mailto:voornaamachternaam@hybrit.org"
+                                                      color="#323232"
+                                                      style="text-decoration: none; color: rgb(50, 50, 50); font-size: 14px;">
+                                                      <span>voornaamachternaam@hybrit.org</span>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                             <tr style="vertical-align: middle;" height="28">
+                                                <td width="26" style="vertical-align: middle;">
+                                                   <table cellpadding="0" cellspacing="0"
+                                                      style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                               <span width="24" style="display: inline-block;">
+                                                                  <img
+                                                                     src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon__Office_Phone-1.png"
+                                                                     color="#EE8211" alt="mobilePhone" width="20"
+                                                                     style="display: block;margin-right: 4px;">
+                                                               </span>
+                                                            </td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td style="padding: 0px; color: rgb(50, 50, 50);">
+                                                   <a class="office-phone" href="tel:0031303080728" color="#323232"
+                                                      style="text-decoration: none; color: rgb(50, 50, 50); font-size: 14px;">
+                                                      <span> 030 227 31 97</span>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                             <tr height="28" style="vertical-align: middle;">
+                                                <td width="30" style="vertical-align: middle;">
+                                                   <table cellpadding="0" cellspacing="0"
+                                                      style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                               <span width="24" style="display: inline-block;">
+                                                                  <img
+                                                                     src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon__calendar-1.png"
+                                                                     color="#EE8211" alt="emailAddress" width="20"
+                                                                     style="display: block;margin-right: 4px;">
+                                                               </span>
+                                                            </td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td style="padding: 0px;">
+                                                   <p class="availability" color="#323232"
+                                                      style="text-decoration: none; color: rgb(50, 50, 50); font-size: 14px;">
+                                                      afwezig op woensdagen </p>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <table cellpadding="0" cellspacing="0"
+                              style="width: 100%;vertical-align: -webkit-baseline-middle;font-size: medium;font-family: Arial;background: #EE8211;height: 2px;">
+                              <tbody></tbody>
+                           </table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="
+                              padding: 12px;
+                              ">
+                           <table cellpadding="0" cellspacing="0"
+                              style="width: 100%; vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                              <tbody>
+                                 <tr>
+                                    <td style="vertical-align: top;width: auto;">
+                                       <a href="https://hybrit.nl/" target="_blank">
+                                          <img
+                                             src="https://hybrit.nl/wp-content/uploads/2023/03/Hybrit_animated_logo.gif"
+                                             role="presentation" width="160"
+                                             style="display: inline-block;max-width: 160px;">
+                                       </a>
+                                    </td>
+                                    <td width="30">
+                                       <div style="width: 30px;"></div>
+                                    </td>
+                                    <td style="text-align: right;vertical-align: middle;">
+                                       <table cellpadding="0" cellspacing="0"
+                                          style="display: inline-block; vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                          <tbody>
+                                             <tr style="text-align: right;">
+                                                <td>
+                                                   <a href="https://www.facebook.com/codeitsmarter/" color="#EE8211"
+                                                      class="social-links" style="display: inline-block;padding: 0px;">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_facebook_dark.png"
+                                                         alt="facebook" color="#EE8211" height="24" class="social-links"
+                                                         style="max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                                <td>
+                                                   <a href="https://www.instagram.com/hybrit_it/" color="#EE8211"
+                                                      class="social-links"
+                                                      style="display: inline-block;padding: 0px;/* background-color: rgb(238, 130, 17); */">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_Instagram_dark.png"
+                                                         alt="linkedin" color="#EE8211" height="24"
+                                                         style="/* background-color: rgb(238, 130, 17); */max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                                <td>
+                                                   <a href="https://twitter.com/BHybrit" color="" class="social-links"
+                                                      style="display: inline-block;padding: 0px;">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_Twitter_dark.png"
+                                                         alt="twitter" height="24" class="social-links"
+                                                         style="max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                                <td>
+                                                   <a href="https://www.linkedin.com/company/hybrit-bv/mycompany/"
+                                                      color="#EE8211" class="social-links"
+                                                      style="display: inline-block;padding: 0px;/* background-color: rgb(238, 130, 17); */">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_Linkedin_dark.png"
+                                                         alt="linkedin" color="#EE8211" height="24"
+                                                         style="/* background-color: rgb(238, 130, 17); */max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <button class="copy-button">Copy to clipboard</button>
+         </article>
+         <br>
+         <article class="content-wrapper">
+            <h1 class="title--h1">E-mail handtekening - Compleet</h1>
+            <div id="signatureFour" class="box-container">
+               <table cellpadding="0" cellspacing="0"
+                  style="vertical-align: -webkit-baseline-middle;font-size: medium;width: 100%;max-width: 560px;font-family: 'Raleway', sans-serif;">
+                  <tbody>
+                     <tr>
+                        <td style="
+                              padding: 6px 16px;
+                              ">
+                           <table cellpadding="0" cellspacing="0"
+                              style="vertical-align: -webkit-baseline-middle;font-size: medium;width: 100%;font-family: 'Raleway', sans-serif;">
+                              <tbody style="
+                                    width: 100%;
+                                    ">
+                                 <tr height="24" style="vertical-align: middle;">
+                                    <td style="vertical-align: middle;">
+                                       <h2 class="name" color="#323232"
+                                          style="margin: 0px;font-size: 18px;color: #323232;font-weight: 700;font-family: 'Raleway', sans-serif;white-space: nowrap;">
+                                          Voornaam Achternaam</h2>
+                                    </td>
+                                 </tr>
+                                 <tr height="24">
+                                    <td>
+                                       <span color="#323232" font-size="medium" class="title"
+                                          style="margin: 0px;color: rgb(50, 50, 50);font-size: 14px;line-height: 22px;font-family: 'Raleway', sans-serif;font-weight: 500;white-space: nowrap;">Functietitel</span>
+                                    </td>
+                                 </tr>
+                                 <tr height="12"></tr>
+                                 <tr>
+                                    <td style="vertical-align: middle;">
+                                       <table cellpadding="0" cellspacing="0"
+                                          style="vertical-align: -webkit-baseline-middle;font-size: medium;font-family: 'Raleway', sans-serif;font-weight: 500;">
+                                          <tbody>
+                                             <tr style="vertical-align: middle;" height="28">
+                                                <td width="26" style="vertical-align: middle;">
+                                                   <table cellpadding="0" cellspacing="0"
+                                                      style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                               <span width="24" style="display: inline-block;">
+                                                                  <img
+                                                                     src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon__Mobile-1.png"
+                                                                     color="#EE8211" alt="mobilePhone" width="20"
+                                                                     style="display: block;margin-right: 4px;">
+                                                               </span>
+                                                            </td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td style="padding: 0px; color: rgb(50, 50, 50);">
+                                                   <a class="mobile-phone" href="tel:00316xxxxxxxx" color="#323232"
+                                                      style="text-decoration: none; color: rgb(50, 50, 50); font-size: 14px;">
+                                                      <span class="mobile">+316xxxxxxxx</span>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                             <tr height="28" style="vertical-align: middle;">
+                                                <td width="30" style="vertical-align: middle;">
+                                                   <table cellpadding="0" cellspacing="0"
+                                                      style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                               <span width="24" style="display: inline-block;">
+                                                                  <img
+                                                                     src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_mail.png"
+                                                                     color="#EE8211" alt="emailAddress" width="20"
+                                                                     style="display: block;margin-right: 4px;">
+                                                               </span>
+                                                            </td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td style="padding: 0px;">
+                                                   <a class="email" href="mailto:voornaamachternaam@hybrit.org"
+                                                      color="#323232"
+                                                      style="text-decoration: none; color: rgb(50, 50, 50); font-size: 14px;">
+                                                      <span>voornaamachternaam@hybrit.org</span>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                             <tr style="vertical-align: middle;" height="28">
+                                                <td width="26" style="vertical-align: middle;">
+                                                   <table cellpadding="0" cellspacing="0"
+                                                      style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                               <span width="24" style="display: inline-block;">
+                                                                  <img
+                                                                     src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon__Office_Phone-1.png"
+                                                                     color="#EE8211" alt="mobilePhone" width="20"
+                                                                     style="display: block;margin-right: 4px;">
+                                                               </span>
+                                                            </td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td style="padding: 0px; color: rgb(50, 50, 50);">
+                                                   <a class="office-phone" href="tel:0031303080728" color="#323232"
+                                                      style="text-decoration: none; color: rgb(50, 50, 50); font-size: 14px;">
+                                                      <span> 030 227 31 97</span>
+                                                   </a>
+                                                </td>
+                                             </tr>
+                                             <tr height="28" style="vertical-align: middle;">
+                                                <td width="30" style="vertical-align: middle;">
+                                                   <table cellpadding="0" cellspacing="0"
+                                                      style="vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td style="vertical-align: bottom;">
+                                                               <span width="24" style="display: inline-block;">
+                                                                  <img
+                                                                     src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon__calendar-1.png"
+                                                                     color="#EE8211" alt="emailAddress" width="20"
+                                                                     style="display: block;margin-right: 4px;">
+                                                               </span>
+                                                            </td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </td>
+                                                <td style="padding: 0px;">
+                                                   <p class="availability" color="#323232"
+                                                      style="text-decoration: none; color: rgb(50, 50, 50); font-size: 14px;">
+                                                      afwezig op woensdagen </p>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <table cellpadding="0" cellspacing="0"
+                              style="width: 100%;vertical-align: -webkit-baseline-middle;font-size: medium;font-family: Arial;background: #EE8211;height: 2px;">
+                              <tbody></tbody>
+                           </table>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="
+                              padding: 12px;
+                              ">
+                           <table cellpadding="0" cellspacing="0"
+                              style="width: 100%; vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                              <tbody>
+                                 <tr>
+                                    <td style="vertical-align: top;width: auto;">
+                                       <a href="https://hybrit.nl/" target="_blank">
+                                          <img
+                                             src="https://hybrit.nl/wp-content/uploads/2023/03/Hybrit_animated_logo.gif"
+                                             role="presentation" width="160"
+                                             style="display: inline-block;max-width: 160px;">
+                                       </a>
+                                    </td>
+                                    <td width="30">
+                                       <div style="width: 30px;"></div>
+                                    </td>
+                                    <td style="text-align: right;vertical-align: middle;">
+                                       <table cellpadding="0" cellspacing="0"
+                                          style="display: inline-block; vertical-align: -webkit-baseline-middle; font-size: medium; font-family: Arial;">
+                                          <tbody>
+                                             <tr style="text-align: right;">
+                                                <td>
+                                                   <a href="https://www.facebook.com/codeitsmarter/" color="#EE8211"
+                                                      class="social-links" style="display: inline-block;padding: 0px;">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_facebook_dark.png"
+                                                         alt="facebook" color="#EE8211" height="24" class="social-links"
+                                                         style="max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                                <td>
+                                                   <a href="https://www.instagram.com/hybrit_it/" color="#EE8211"
+                                                      class="social-links"
+                                                      style="display: inline-block;padding: 0px;/* background-color: rgb(238, 130, 17); */">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_Instagram_dark.png"
+                                                         alt="linkedin" color="#EE8211" height="24"
+                                                         style="/* background-color: rgb(238, 130, 17); */max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                                <td>
+                                                   <a href="https://twitter.com/BHybrit" color="" class="social-links"
+                                                      style="display: inline-block;padding: 0px;">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_Twitter_dark.png"
+                                                         alt="twitter" height="24" class="social-links"
+                                                         style="max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                                <td>
+                                                   <a href="https://www.linkedin.com/company/hybrit-bv/mycompany/"
+                                                      color="#EE8211" class="social-links"
+                                                      style="display: inline-block;padding: 0px;/* background-color: rgb(238, 130, 17); */">
+                                                      <img
+                                                         src="https://hybrit.nl/wp-content/uploads/2023/03/Signature_icon_Linkedin_dark.png"
+                                                         alt="linkedin" color="#EE8211" height="24"
+                                                         style="/* background-color: rgb(238, 130, 17); */max-width: 135px;display: block;">
+                                                   </a>
+                                                </td>
+                                                <td width="5">
+                                                   <div></div>
+                                                </td>
+                                             </tr>
+                                          </tbody>
+                                       </table>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            <button class="copy-button">Copy to clipboard</button>
+         </article>
+      </div>
+   </main>
+   <script>
+      document.getElementById("generate").onclick = function () {generateSignature()};
+
+
+
+
+      var outputNames = document.querySelectorAll('.name');
+      var outputTitles = document.querySelectorAll('.title');
+      var outputEmails = document.querySelectorAll('.email');
+      var outputMobiles = document.querySelectorAll('.mobile');
+      var outputMobileLinks = document.querySelectorAll('.mobile-phone');
+      var outputAvailabilities = document.querySelectorAll('.availability');
+
+
+
+      function generateSignature() {
+
+         var fullName = document.getElementById('input-Name').value;
+         var title = document.getElementById('input-Title').value;
+         var email = document.getElementById('input-Email').value;
+         var emailHref = 'mailto:' + email;
+         var mobile = document.getElementById('input-Mobile').value;
+         var mobileHref = 'tel:' + mobile.replace(/\s+/g, '');
+         var availability = document.getElementById('input-Availability').value;
+         outputNames.forEach(outputName => {outputName.innerText = fullName;});
+         outputTitles.forEach(outputTitle => {outputTitle.innerText = title;});
+         outputEmails.forEach(outputEmail => {outputEmail.innerText = email; outputEmail.setAttribute('href', emailHref)});
+         outputMobiles.forEach(outputMobile => {outputMobile.innerText = mobile;});
+         outputMobileLinks.forEach(outputMobileLink => {outputMobileLink.setAttribute('href', mobileHref);});
+         outputAvailabilities.forEach(outputAvailability => {outputAvailability.innerText = availability;});
+      }
+
+
+      function copyToClipboard(html) {
+         var container = document.createElement('div')
+         container.innerHTML = html
+         container.style.position = 'fixed'
+         container.style.pointerEvents = 'none'
+         container.style.opacity = 0
+         document.body.appendChild(container)
+         window.getSelection().removeAllRanges()
+         var range = document.createRange()
+         range.selectNode(container)
+         window.getSelection().addRange(range)
+         document.execCommand('copy')
+         document.body.removeChild(container);
+      }
+
+
+      var copyButtons = document.querySelectorAll('.copy-button');
+      copyButtons.forEach(function (copyButton) {
+
+         copyButton.addEventListener('click', function () {
+            alert("Copied")
+            var signatureRendered = this.previousElementSibling;
+            copyToClipboard(signatureRendered.innerHTML);
+         })
+      })
+
+   </script>
+</body>
+
+</html>
